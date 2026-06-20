@@ -4,13 +4,29 @@ import streamlit as st
 
 docs = [
     "football match and players",
-    "cricket world cup",
+    "cricket world cup tournament",
     "python programming language",
-    "machine learning project"
+    "machine learning algorithms",
+    "hospital doctors and patients",
+    "medical treatment and surgery",
+    "stock market investment",
+    "banking and finance sector",
+    "movies and entertainment industry",
+    "music concerts and songs"
 ]
 
-labels = ["Sports", "Sports", "Technology", "Technology"]
-
+labels = [
+    "Sports",
+    "Sports",
+    "Technology",
+    "Technology",
+    "Healthcare",
+    "Healthcare",
+    "Finance",
+    "Finance",
+    "Entertainment",
+    "Entertainment"
+]
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(docs)
 
