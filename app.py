@@ -35,6 +35,7 @@ model.fit(X, labels)
 
 st.title("AI Document Classifier")
 st.write("Enter any text and the model will predict its category.")
+text = st.text_area("Enter text")
 if st.button("Classify"):
     prediction = model.predict(
         vectorizer.transform([text])
