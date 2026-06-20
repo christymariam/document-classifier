@@ -33,10 +33,8 @@ X = vectorizer.fit_transform(docs)
 model = MultinomialNB()
 model.fit(X, labels)
 
-st.title("Document Classifier")
-
-text = st.text_area("Enter a document")
-
+st.title("AI Document Classifier")
+st.write("Enter any text and the model will predict its category.")
 if st.button("Classify"):
     prediction = model.predict(
         vectorizer.transform([text])
